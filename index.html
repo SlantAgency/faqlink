@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQS</title>
     <link rel="stylesheet" href="./style.css" />
-    <script>const faqs= document.querySelectorAll(".faq");
-        faqs.forEach((faq) => {
-        faq.addEventListener("click",() => {
-        faq.classList.toggle("active");
-    });
-});</script>
 </head>
 <body>
     <section>
-        <h2 class="title">FAQS</h2> <!-- Corrected 'clss' to 'class' -->
+        <h2 class="title">FAQS</h2>
         <div class="faq">
             <div class="question">
                 <h3>Where can I get started?</h3>
@@ -71,5 +65,15 @@
             </div>
         </div>
     </section>
+    
+    <!-- Move the script here to ensure the DOM is fully loaded -->
+    <script>
+        const faqs = document.querySelectorAll(".faq");
+        faqs.forEach((faq) => {
+            faq.addEventListener("click", () => {
+                faq.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
